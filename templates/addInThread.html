@@ -1,0 +1,9 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" media="screen"/>
+</head>
+<form class="text" action="{% url 'addInThread' %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" value="submit">
+</form>

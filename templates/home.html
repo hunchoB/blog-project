@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>☠i☠l☠i☠c☠h☠</title>
+
+    <link rel="stylesheet" type="text/css" href="../ilich/static/style.css" media="screen"/>
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+
+<div class="buttonRegistration">
+
+    <a>LOGIN</a>
+
+    <a>REGISTER</a>
+
+</div>
+
+
+    <header><pre>
+ ██▓  ██▓     ██▓  ▄████▄   ██░ ██ 
+▒▓██▒ ▓██▒   ▒▓██▒ ▒██▀ ▀█ ▒▓██░ ██ 
+▒▒██▒ ▒██░   ▒▒██▒ ▒▓█    ▄░▒██▀▀██ 
+░░██░ ▒██░   ░░██░▒▒▓▓▄ ▄██ ░▓█ ░██ 
+░░██░▒░██████░░██░░▒ ▓███▀  ░▓█▒░██▓
+ ░▓  ░░ ▒░▓   ░▓  ░░ ░▒ ▒    ▒ ░░▒░▒
+░ ▒ ░░░ ░ ▒  ░ ▒ ░   ░  ▒    ▒ ░▒░ ░
+░ ▒ ░   ░ ░  ░ ▒ ░ ░         ░  ░░ ░
+  ░  ░    ░    ░   ░ ░       ░  ░  ░
+</pre><br></header>
+
+<main>
+<div class="menu">
+
+    <div class="links">
+
+        <div class="links-col">
+
+            <div>техника</div>
+
+            <a href="#">├ софт</a>
+
+            <a href="#">├ железо</a>
+
+        </div>
+
+        <div class="links-col">
+
+            <div>аниме</div>
+
+            <a href="#">├ тайтлы</a>
+
+            <a href="#">├ манга</a>
+
+        </div>
+
+        <div class="links-col">
+
+            <div>аниме</div>
+
+            <a href="#">├ тайтлы</a>
+
+            <a href="#">├ манга</a>
+
+        </div>
+
+        <div class="links-col">
+
+            <div>вейпинг</div>
+
+            <a href="#">├ тайтлы</a>
+
+            <a href="#">├ манга</a>
+
+        </div>
+
+        <div class="links-col">
+
+            <div>аниме</div>
+
+            <a href="#">├ тайтлы</a>
+
+            <a href="#">├ манга</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="menu">
+
+        <form method="POST" action="{% url 'addInBoard' %}">
+
+            {% csrf_token %}
+
+            всего тредов: {{count}} <button>создать тред</button>
+            {% block content%}{% endblock content %}
+        </form>
+    </div>
+
+ 
+
+    {%for forum in forums reversed %}
+
+    <div class="text">
+
+        <p><a href='{{forum.link}}'><b>{{forum.topic}}</b></a> от: {{forum.name}} - {{forum.email|urlize}} - {{forum.datec}} - $id$
+
+            <form method="POST" action="{% url 'addInThread' %}">
+
+                {% csrf_token %}
+
+                <button>ответить</button>
+
+            </form>
+
+        </p>
+
+            {{forum.descr|urlize}}
+
+    </div>
+
+
+
+                       
+
+        {%for discuss in discussions%}
+
+            {%for objs in discuss%}  
+
+                {% if objs.forum == forum %}
+
+                <div class="text">
+
+                <p>от: {{forum.name}} - {{forum.email|urlize}} - {{forum.datec}} - $id$
+
+                    <form method="POST" action="{% url 'addInThread' %}">
+
+                        {% csrf_token %}
+
+                        <button>ответить</button>
+
+                    </form>
+
+                </p>
+
+                
+
+                    {{objs.discuss|urlize}}
+
+                </div>
+
+                {% endif %}
+
+            {%endfor%}
+
+        {%endfor%}
+
+    {%endfor%}
+
+
+
+    
+
+</main>
+
+<div class="menu">
+
+    <pre>без мобильной версий, без светлой темы, ☠web-1.0☠ style</pre>
+
+</div>
+
+<script>
+
+    let counter = 0;
+
+    window.onload = () => {
+
+        const titles = [
+
+            "il-hua",
+
+            "обнаружен ☠вирус☠",
+
+            "когда бд",
+
+            "опять упал",
+
+            "скоро открытие",];
+
+        setInterval(() => {
+
+            counter++;
+
+            document.title = titles[counter%titles.length];
+
+            if (counter == titles.length) counter = 0;
+
+        }, 500);
+
+    };
+
+</script>
+
+</body>
+
+</html>

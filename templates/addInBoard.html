@@ -1,0 +1,15 @@
+{% extends "home.html" %}
+{% block title %}addInBoard{% endblock title %}
+{% block header %}<!--Главнаяs-->{% endblock header %}
+{% load staticfiles %}
+
+{% block content %}
+
+<form class="text" action="{% url 'addInBoard' %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" value="submit">
+</form>
+
+{% endblock content %}
+
