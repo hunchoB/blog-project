@@ -10,7 +10,7 @@
 
     <title>☠i☠l☠i☠c☠h☠</title>
 
-    <link rel="stylesheet" type="text/css" href="../ilich/static/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../ilich/static/style.css" media="screen" />
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700" rel="stylesheet">
 
 </head>
@@ -19,16 +19,31 @@
 
 <body>
 
-<div class="buttonRegistration">
+    <div class="buttonRegistration">
 
-    <a>LOGIN</a>
+        <a class="signin">Sign IN</a>
 
-    <a>REGISTER</a>
-
+        <a class="signup">Sign UP</a>
+        <div id="window">
+            <div class="form">
+                <form action="index.html" name="f1">
+                    <input type="text" placeholder="Имя" name="name1" class="input">
+                    <input type="text" placeholder="Фамилия" name="name2" class="input">
+                    <input type="email" placeholder="Email" name="email1" class="input">
+                    <input type="password" placeholder="Пароль" name="pass1" class="input">
+                    <input type="password" placeholder="Подтвердите пароль" name="pass2" class="input">
+                    <input type="submit" value="Регистрация" name="sab" class="input"> Нажимая «Регистрация», вы
+                    подтверждаете,
+                    что вы полный анимешник как Илюха.
+                </form>
+            </div>
+        </div>
+</body>
 </div>
 
 
-    <header><pre>
+<header>
+    <pre>
  ██▓  ██▓     ██▓  ▄████▄   ██░ ██ 
 ▒▓██▒ ▓██▒   ▒▓██▒ ▒██▀ ▀█ ▒▓██░ ██ 
 ▒▒██▒ ▒██░   ▒▒██▒ ▒▓█    ▄░▒██▀▀██ 
@@ -41,63 +56,63 @@
 </pre><br></header>
 
 <main>
-<div class="menu">
+    <div class="menu">
 
-    <div class="links">
+        <div class="links">
 
-        <div class="links-col">
+            <div class="links-col">
 
-            <div>техника</div>
+                <div>техника</div>
 
-            <a href="#">├ софт</a>
+                <a href="#">├ софт</a>
 
-            <a href="#">├ железо</a>
+                <a href="#">├ железо</a>
 
-        </div>
+            </div>
 
-        <div class="links-col">
+            <div class="links-col">
 
-            <div>аниме</div>
+                <div>аниме</div>
 
-            <a href="#">├ тайтлы</a>
+                <a href="#">├ тайтлы</a>
 
-            <a href="#">├ манга</a>
+                <a href="#">├ манга</a>
 
-        </div>
+            </div>
 
-        <div class="links-col">
+            <div class="links-col">
 
-            <div>аниме</div>
+                <div>аниме</div>
 
-            <a href="#">├ тайтлы</a>
+                <a href="#">├ тайтлы</a>
 
-            <a href="#">├ манга</a>
+                <a href="#">├ манга</a>
 
-        </div>
+            </div>
 
-        <div class="links-col">
+            <div class="links-col">
 
-            <div>вейпинг</div>
+                <div>вейпинг</div>
 
-            <a href="#">├ тайтлы</a>
+                <a href="#">├ тайтлы</a>
 
-            <a href="#">├ манга</a>
+                <a href="#">├ манга</a>
 
-        </div>
+            </div>
 
-        <div class="links-col">
+            <div class="links-col">
 
-            <div>аниме</div>
+                <div>аниме</div>
 
-            <a href="#">├ тайтлы</a>
+                <a href="#">├ тайтлы</a>
 
-            <a href="#">├ манга</a>
+                <a href="#">├ манга</a>
+
+            </div>
 
         </div>
 
     </div>
-
-</div>
 
     <div class="menu">
 
@@ -110,13 +125,14 @@
         </form>
     </div>
 
- 
+
 
     {%for forum in forums reversed %}
 
     <div class="text">
 
-        <p><a href='{{forum.link}}'><b>{{forum.topic}}</b></a> от: {{forum.name}} - {{forum.email|urlize}} - {{forum.datec}} - $id$
+        <p><a href='{{forum.link}}'><b>{{forum.topic}}</b></a> от: {{forum.name}} - {{forum.email|urlize}} -
+            {{forum.datec}} - $id$
 
             <form method="POST" action="{% url 'addInThread' %}">
 
@@ -128,51 +144,51 @@
 
         </p>
 
-            {{forum.descr|urlize}}
+        {{forum.descr|urlize}}
 
     </div>
 
 
 
-                       
 
-        {%for discuss in discussions%}
 
-            {%for objs in discuss%}  
+    {%for discuss in discussions%}
 
-                {% if objs.forum == forum %}
+    {%for objs in discuss%}
 
-                <div class="text">
+    {% if objs.forum == forum %}
 
-                <p>от: {{forum.name}} - {{forum.email|urlize}} - {{forum.datec}} - $id$
+    <div class="text">
 
-                    <form method="POST" action="{% url 'addInThread' %}">
+        <p>от: {{forum.name}} - {{forum.email|urlize}} - {{forum.datec}} - $id$
 
-                        {% csrf_token %}
+            <form method="POST" action="{% url 'addInThread' %}">
 
-                        <button>ответить</button>
+                {% csrf_token %}
 
-                    </form>
+                <button>ответить</button>
 
-                </p>
+            </form>
 
-                
+        </p>
 
-                    {{objs.discuss|urlize}}
 
-                </div>
 
-                {% endif %}
+        {{objs.discuss|urlize}}
 
-            {%endfor%}
+    </div>
 
-        {%endfor%}
+    {% endif %}
+
+    {%endfor%}
+
+    {%endfor%}
 
     {%endfor%}
 
 
 
-    
+
 
 </main>
 
@@ -183,7 +199,6 @@
 </div>
 
 <script>
-
     let counter = 0;
 
     window.onload = () => {
@@ -198,20 +213,20 @@
 
             "опять упал",
 
-            "скоро открытие",];
+            "скоро открытие",
+        ];
 
         setInterval(() => {
 
             counter++;
 
-            document.title = titles[counter%titles.length];
+            document.title = titles[counter % titles.length];
 
             if (counter == titles.length) counter = 0;
 
         }, 500);
 
     };
-
 </script>
 
 </body>
