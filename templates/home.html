@@ -23,10 +23,14 @@
 
         <a class="signin">Sign IN</a>
 
-        <a class="signup">Sign UP</a>
+        <a onclick="show('block')" class="signup">Sign UP</a>
+
+        <div onclick="show('none')" id="interlayer"></div>
+
         <div id="window">
             <!-- Close window-->
-            <img class="closeregwindow" src="../img/close.png" width="20" height="20" alt="картинка">
+            <img onclick="show('none')" class="closeregwindow" src="../img/close.png" width="20" height="20"
+                alt="картинка">
             <div class="form">
                 <h2>Регистрация</h2>
                 <form action="index.html" name="f1">
@@ -201,36 +205,8 @@
 
 </div>
 
-<script>
-    let counter = 0;
-
-    window.onload = () => {
-
-        const titles = [
-
-            "il-hua",
-
-            "обнаружен ☠вирус☠",
-
-            "когда бд",
-
-            "опять упал",
-
-            "скоро открытие",
-        ];
-
-        setInterval(() => {
-
-            counter++;
-
-            document.title = titles[counter % titles.length];
-
-            if (counter == titles.length) counter = 0;
-
-        }, 500);
-
-    };
-</script>
+<script src="../scripts/title.js"></script>
+<script src="../scripts/regWindow.js"></script>
 
 </body>
 
