@@ -1,5 +1,5 @@
 body {
-    background: #212121;
+    background: url('../../img/footer.jpg');
     color: #eaeaea;
     font-family: monospace;
     margin: 0;
@@ -66,7 +66,7 @@ main {
     align-items: center;
     min-width: 288px;
     border: 1px solid #212121;
-    background: #323232;
+    background: black;
     box-sizing: border-box;
     position: relative;
     margin: 0 auto;
@@ -222,4 +222,48 @@ button:hover {
     bottom: 0;
     display: none;
     z-index: 100;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    text-transform: none;
+    text-align: center;
+    padding-top: 25px;
+    border: 1px solid #fff;    
+    left: 0;
+    bottom: 0;
+    background: url('../../img/footer.jpg') 100px;
+    margin-bottom: -100px;
+    /*margin-left: -100px; */
+
+}
+
+footer a{
+    text-align: center;
+    font-size: 16px;
+    margin: 0 50px 0 50px;
+}
+
+footer nav a:hover{
+    border-bottom: 1px solid white;
+}
+
+footer>pre {
+
+    margin-top: 20px;
+    font-family: monospace;
+    animation: m 1s linear infinite alternate;
+    transform: skewX(-20deg);
+}
+
+.social a{
+    margin: 0 25px 0 0;
+    margin-left: 25px;
+}
+
+footer p{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
 }
