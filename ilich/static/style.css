@@ -270,7 +270,7 @@ footer p {
 
 body.lock {
     overflow: hidden;
-}
+} 
 
 .popup {
     position: fixed;
@@ -284,6 +284,7 @@ body.lock {
     overflow-y: auto;
     overflow-x: hidden;
     transition: all 0.8s ease 0s;
+  
 }
 
 .popup.open {
@@ -338,4 +339,6 @@ body.lock {
     margin: 0px 0px 1em 0px;
 }
 
-/* .popup_text {} */
+ .popup_text {
+     
+ } 
