@@ -1,0 +1,464 @@
+@charset "UTF-8";
+/* Nullify */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* Nullify */
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.hi {
+  background-color: white;
+  /* background-color:yellow; */
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 65.74%;
+  margin: 0 auto;
+}
+
+.hi_box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* justify-content: center; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hi_aboutus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 0 30px 0;
+}
+
+.hi_aboutus p {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.our_name {
+  font-size: 120px;
+  font-style: italic;
+  line-height: 59px;
+  color: #070707;
+}
+
+span.bold {
+  font-weight: bold;
+  color: #070707;
+}
+
+.footer {
+  background: white;
+  /* must be white */
+}
+
+.footer_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact_title {
+  margin: 114px auto 20px auto;
+}
+
+.contact_sentence {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact_button {
+  font-size: 14px;
+  text-align: center;
+  background-color: black;
+  padding: 8px 10px;
+  margin: 0px 60px;
+  border-radius: 50px;
+  margin-bottom: 86px;
+}
+
+.contact_button:hover {
+  -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact_button a {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.contact_links {
+  margin-bottom: 46px;
+}
+
+.contact_links a {
+  margin: 0 36px;
+}
+
+.contact_text {
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #828282;
+  margin: 0 0 123.19px 0;
+}
+
+.container_allpage {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #F6F6F6;
+}
+
+.information_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* flex: 0 0; */
+}
+
+.information_title {
+  margin-top: 120px;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+  color: #070707;
+}
+
+.information_text {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #070707;
+  margin-bottom: 107px;
+}
+
+.information_text p {
+  padding: 30px;
+}
+
+.skill_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* justify-content: center; */
+}
+
+.skill_title {
+  margin: 91px 0 69px 0;
+}
+
+.skill_sentence {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin: 0 0 83.49px 0;
+}
+
+.skill_items_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.items_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill_item_image {
+  margin: 0 auto 23.03px auto;
+}
+
+.skill_item_subtitle {
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 0 0 40.41px 0;
+}
+
+/* Реализованный рейтинг только на CSS. Надо реализовать на JS */
+.skill_item_rating {
+  text-align: center;
+  margin: 0 0 111.06px 0;
+  font-size: 0;
+}
+
+.star-rating__wrap {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.star-rating__wrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.star-rating__ico {
+  float: right;
+  padding-left: 2px;
+  cursor: pointer;
+  color: #070707;
+}
+
+.star-rating__ico:last-child {
+  padding-left: 0;
+}
+
+.star-rating__input {
+  display: none;
+}
+
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before {
+  content: "\f005";
+  /* color: #E5E5E5; */
+}
+
+/* Реализованный рейтинг только на CSS. Надо реализовать на JS */
+.portfolio_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio_title {
+  margin: 112.93px 0 47px 0;
+}
+
+.portfolio_image {
+  max-width: 65.74%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.portfolio_subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  margin: 44.88px 0 99.09px 0;
+}
+
+a.idTop {
+  position: fixed;
+  /*позиционирование кнопки фиксированное*/
+  z-index: 9999;
+  /*отображаем поверх всех элементов*/
+  bottom: 0%;
+  /*положение снизу*/
+  right: 0%;
+  /*положение справа*/
+  background: #7db9e8;
+  /*фон, можно указать любую картинку*/
+  opacity: .6;
+  /*прозрачность*/
+  color: #fff;
+  /*цвет текста*/
+  padding: 10px;
+  /*внутренние отступы*/
+  margin: 5px 15px 15px 5px;
+  /*внешние отступы*/
+}
+
+a.idTop:hover {
+  opacity: 1;
+}
+
+.header {
+  margin: 30px auto 0 auto;
+}
+
+.header__navigation nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+  line-height: 22px;
+  color: #828282;
+  border-bottom: 1px solid #828282;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+  padding-bottom: 32px;
+}
+
+.header__navigation nav a {
+  color: black;
+}
+
+.header__navigation nav a:hover {
+  color: gold;
+}
