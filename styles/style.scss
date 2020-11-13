@@ -1,94 +1,5 @@
-/* Nullify */
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-*,
-*:before,
-*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-:focus,
-:active {
-    outline: none;
-}
-
-a:focus,
-a:active {
-    outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-    display: block;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-    font-family: inherit;
-}
-
-input::-ms-clear {
-    display: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
-a,
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-ul li {
-    list-style: none;
-}
-
-img {
-    vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit;
-    font-weight: 400;
-}
-
-/* Nullify */
+@import "nullstyle";
+@import "login";
 
 body {
     font-family: 'Playfair Display', serif;
@@ -120,7 +31,13 @@ body {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+
     // margin: 39.69px auto;
+    & .hi__reginfo {
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 
@@ -128,10 +45,13 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0 0 30px 0;
-    & p {text-align: center;
+    margin: 100px auto 50px auto;
+
+    & p {
+        text-align: center;
         margin: 30px auto;
-        }
-    
+    }
+
 
 }
 
@@ -140,7 +60,7 @@ body {
     font-style: italic;
     line-height: 59px;
     color: #070707;
-    
+
 
 }
 
@@ -169,7 +89,7 @@ span.bold {
     align-items: center;
 }
 
-.contact_info {}
+
 
 .contact_title {
     margin: 114px auto 20px auto;
@@ -182,26 +102,27 @@ span.bold {
     margin-bottom: 30px;
 }
 
-.contact_button {
-    font-size: 14px;
+
+.button {
+    // font-size: 14px;
     text-align: center;
     background-color: black;
     padding: 8px 10px;
     margin: 0px 60px;
     border-radius: 50px;
     margin-bottom: 86px;
-
-}
-
-.contact_button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-.contact_button a {
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: #FFFFFF;
+
+
+    &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    & a {
+        color: #FFFFFF;
+    }
 }
 
 .contact_links {
@@ -229,7 +150,7 @@ span.bold {
     background: #F6F6F6;
 }
 
-.information {}
+
 
 .information_box {
     display: flex;
@@ -237,7 +158,7 @@ span.bold {
     /* flex: 0 0; */
 }
 
-.information_body {}
+
 
 .information_title {
     margin-top: 120px;
@@ -263,7 +184,6 @@ span.bold {
     padding: 30px;
 }
 
-.skill {}
 
 .skill_box {
     display: flex;
@@ -309,15 +229,6 @@ span.bold {
 
 }
 
-
-
-.skill_item1 {}
-
-.skill_item2 {}
-
-.skill_item3 {}
-
-.skill_item4 {}
 
 /* Реализованный рейтинг только на CSS. Надо реализовать на JS */
 .skill_item_rating {
@@ -382,7 +293,7 @@ span.bold {
     margin: 112.93px 0 47px 0;
 }
 
-.portfolio_content {}
+
 
 .portfolio_image {
     max-width: 65.74%;
@@ -430,8 +341,6 @@ a.idTop:hover {
 
 }
 
-.header__box {}
-
 .header__navigation {
     & nav {
         display: flex;
@@ -455,12 +364,8 @@ a.idTop:hover {
 }
 
 
-.home {}
-
-.about {}
-
-.skills {}
-
-.portfolio {}
-
-.contacts {}
+.hi__autorization {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 40px auto;
+}

@@ -133,6 +133,12 @@ body {
           align-items: center;
 }
 
+.hi_box .hi__reginfo {
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .hi_aboutus {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +148,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 0 30px 0;
+  margin: 100px auto 50px auto;
 }
 
 .hi_aboutus p {
@@ -193,25 +200,24 @@ span.bold {
   margin-bottom: 30px;
 }
 
-.contact_button {
-  font-size: 14px;
+.button {
   text-align: center;
   background-color: black;
   padding: 8px 10px;
   margin: 0px 60px;
   border-radius: 50px;
   margin-bottom: 86px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
 }
 
-.contact_button:hover {
+.button:hover {
   -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.contact_button a {
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
+.button a {
   color: #FFFFFF;
 }
 
@@ -461,4 +467,14 @@ a.idTop:hover {
 
 .header__navigation nav a:hover {
   color: gold;
+}
+
+.hi__autorization {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px auto 40px auto;
 }
