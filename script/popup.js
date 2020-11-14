@@ -1,18 +1,27 @@
-let popap = document.getElementById("popup");
-let btn = document.getElementById("submit");
-let span = document.getElementsByClassName("close")[0];
+document.addEventListener('DOMContentLoaded', function () {
 
-btn.onclick = function () {
-    popap.style.display = "block";
+    let popap = document.getElementById("popup");
+    let btn = document.getElementById("submit");
+    let span = document.getElementsByClassName("close")[0];
+    let toMainPage = document.getElementById('notice');
 
-}
+    function transitTo() {
+        toMainPage.click();
+    }
 
-span.onclick = function () {
-    popap.style.display = "none";
-}
+    btn.onclick = function () {
+        setTimeout(transitTo, 5000);
+        popap.style.display = "block";
 
-window.onclick = function (event) {
-    if (event.target == popup) {
+    }
+
+    span.onclick = function () {
         popap.style.display = "none";
     }
-}
+
+    window.onclick = function (event) {
+        if (event.target == popup) {
+            popap.style.display = "none";
+        }
+    }
+});
