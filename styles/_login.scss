@@ -1,7 +1,7 @@
 .login {}
 
 .regform {
-    height: 600px;
+    height: 80%;
 
     &:hover {
         border: 3px solid black;
@@ -40,6 +40,7 @@ label {
 
 .change_link {
     text-align: center;
+    padding-bottom: 100px;
 
 }
 

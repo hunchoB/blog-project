@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Войти</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+
+            <header class="header">
+                <div class="container">
+                    <div class="header__box">
+                        <!-- Якорь -->
+                        <div class="header__navigation">
+                            <nav>
+                                <a href="base.html" class="home">Главная</a>
+                                <a href="" class="about" hidden>Мои статьи</a>
+                                <a href="" class="skills" hidden>Настройка профиля</a>
+                                <a href="" class="portfolio" hidden>Создать статью</a>
+                                <a href="login.html" class="login">Войти/Зарегистрироваться</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="login">
+                <div class="container_allpage">
+                    <div class="regform">
+                        <!-- спрятанный якорь, чтобы избежать прыжков http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                        <div id="subscribe" class="animate form">
+                            <form action="mysuperscript.php" autocomplete="on">
+                                <div class="regform__title title">Зарегистрироваться</div>
+                                <p>
+                                    <label for="usernamesignup" class="uname" data-icon="u">Ваш логин</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text"
+                                        placeholder="username" />
+                                </p>
+                                <p>
+                                    <label for="emailsignup" class="youmail" data-icon="e">Ваш email</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="text"
+                                        placeholder="user@mail.com" />
+                                </p>
+                                <p>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Пароль</label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password"
+                                        placeholder="password" />
+                                </p>
+                                <p>
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Повторите пароль</label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required"
+                                        type="password" placeholder="password" />
+                                </p>
+                                <p class="loginb">
+                                    <input type="submit" value="Зарегистрироваться" />
+                                </p>
+                                <p class="change_link">
+                                    Уже зарегистрированы ?
+                                    <a href="login.html" class="to_subscribe"> Войти </a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer_box">
+                        <div class="contact_info">
+                            <div class="contact_title title">
+                                <p>Контакты</p>
+                            </div>
+                            <div class="contact_sentence">Желаете задать вопрос разработчикам?<br>
+                                Добро пожаловать!</div>
+                            <div class="contact_button button"><a href="mailto:mrnk.k@mail.ru?subject=Вопрос из блога"
+                                    target="_blank">Отправить сообщение</a></div>
+                        </div>
+                        <div class="contact_links">
+                            <a href="https://vk.com/id151459593" target="_blank"><img src="img/vk.png" width="40"
+                                    height="40" alt="meInVK"></a>
+                            <a href="https://www.instagram.com/miroshnichenko.kate/?igshid=khdo6suc48z5"
+                                target="_blank"><img src="img/instagram.png" alt="meInInstagram"></a>
+                            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" width="40"
+                                    height="40" alt="meInTwitter"></a>
+                            <a href="https://dribbble.com/" target="_blank"><img src="img/dribble.png"
+                                    alt="meInDribble"></a>
+                        </div>
+                        <div class="contact_text">Задавайте вопросы разработчикам в <br>
+                            VK, Instagram, Email, Twitter.</div>
+
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- <div><a href="#top" class="idTop">ВВЕРХ</a></div> -->
+    </div>
+</body>
+
+</html>

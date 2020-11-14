@@ -90,7 +90,7 @@ h6 {
 
 /* Nullify */
 .regform {
-  height: 600px;
+  height: 80%;
 }
 
 .regform:hover {
@@ -131,6 +131,7 @@ label {
 
 .change_link {
   text-align: center;
+  padding-bottom: 100px;
 }
 
 input {
