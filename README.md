@@ -1,2 +1,2 @@
-# figma-card-site
-It is business card site from Figma. 
+# Blog
+It is blog. Only HTML SCSS JS 
