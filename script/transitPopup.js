@@ -1,41 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
-    let popap = document.getElementById("popup");
-    let btn = document.getElementById("submit");
-    let span = document.getElementsByClassName("close")[0];
-    let toMainPage = document.getElementById("mainLink");
+    const form = document.querySelector(".form");
+    const input = document.querySelector(".input");
+    const button = document.querySelector(".button")
+    const modal = document.querySelector(".popup");
+    const toMainPage = document.getElementById("mainLink");
 
-    function transitTo() {
-        toMainPage.click();
-    }
-
-    // alert(userLogin);
-
-    btn.onclick = function () {
+    function submit(e) {
+        const popupDisplay = getComputedStyle(popup).display;
+        popupDisplay === "none" && e.preventDefault();
 
         let userLogin = document.getElementById("usernamesignup").value;
         let userMail = document.getElementById("emailsignup").value;
         let password = document.getElementById("passwordsignup").value;
         let repeatPassword = document.getElementById("passwordsignup_confirm").value;
 
-        if (userLogin != "" && userMail != ""  && password != "" && repeatPassword != "" && password == repeatPassword) {
-            setTimeout(function() { $f.submit(); }, 6300);
-            setTimeout(transitTo, 5000);
-            popap.style.display = "block";
+        if (userLogin != "" && userMail != "" && password != "" && repeatPassword != "" && password == repeatPassword) {
+            popup.style.display = 'block';
+            setTimeout(() => form.submit(), 4000);
+            setTimeout(() => toMainPage.click(), 5000);
         } else {
             alert("Check your entering field!!");
         }
     }
+    form.addEventListener("submit", submit);
 
-    span.onclick = function () {
-        popap.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == popup) {
-            popap.style.display = "none";
-        }
-    }
 });
 // 
