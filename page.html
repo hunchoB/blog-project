@@ -53,18 +53,7 @@
                             <label for="formName" class="form__label">Имя:</label>
                             <input type="text" id="formName" name="name" class="form__input">
                         </div>
-                        <div class="form__item">
-                            <label for="formOldPassword" class="form__label">Старый пароль*:</label>
-                            <input type="password" id="formOldPassword" name="oldpass" class="form__input">
-                        </div>
-                        <div class="form__item">
-                            <label for="formPassword" class="form__label">Новый пароль:</label>
-                            <input type="password" id="formPassword" name="pass" class="form__input">
-                        </div>
-                        <div class="form__item">
-                            <label for="formRepeatPassword" class="form__label">Введите новый пароль еще раз*:</label>
-                            <input type="password" id="formRepeatPassword" name="reppass" class="form__input">
-                        </div>
+                        
                         <div class="form__item">
                             <label for="formDescribe" class="form__label">Расскажите о себе:</label>
                             <textarea name="describe" id="formDescribe" class="form__input"></textarea>
@@ -86,13 +75,25 @@
                                         class="file__input">
                                     <div class="file__button">Выбрать</div>
                                 </div>
-                                <div class="file__preview"></div>
+                                <div id="formPreview" class="file__preview"></div>
                             </div>
+                        </div>
+                        <div class="form__item">
+                            <label for="formOldPassword" class="form__label">Старый пароль*:</label>
+                            <input type="password" id="formOldPassword" name="oldpass" class="form__input _req">
+                        </div>
+                        <div class="form__item">
+                            <label for="formPassword" class="form__label">Новый пароль:</label>
+                            <input type="password" id="formPassword" name="pass" class="form__input _req">
+                        </div>
+                        <div class="form__item">
+                            <label for="formRepeatPassword" class="form__label">Введите новый пароль еще раз*:</label>
+                            <input type="password" id="formRepeatPassword" name="reppass" class="form__input _req">
                         </div>
 
                         <div class="file__item">
                             <div class="checkbox">
-                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input"
+                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req"
                                     checked>
                                 <label for="formAgreement" class="checkbox__label"><span>Даю свое согласие на обработку
                                         данных в соответствии с <a href="">Условиями</a></span></label>
@@ -137,7 +138,7 @@
         </div>
         <!-- <div><a href="#top" class="idTop">ВВЕРХ</a></div> -->
     </div>
-    <script src="script/menu.js"></script>
+    <script src="script/userSettings.js"></script>
 </body>
 
 </html>
