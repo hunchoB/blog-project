@@ -9,8 +9,8 @@
     }
 }
 
-.menu a.parent{
-margin: 0 20px 0px 0px;
+.menu a.parent {
+    margin: 0 20px 0px 0px;
 }
 
 
@@ -25,7 +25,7 @@ margin: 0 20px 0px 0px;
     left: 20px;
     top: 15px;
     padding: 20px 0px 0px 0px;
-    
+
     &>li {
         background-color: rgb(187, 187, 190);
         border: 1px solid rgb(68, 65, 65);
@@ -40,7 +40,7 @@ margin: 0 20px 0px 0px;
     padding: 15px 20px;
 }
 
-.arrow{
+.arrow {
     display: none;
     position: absolute;
     right: 0;
@@ -50,24 +50,20 @@ margin: 0 20px 0px 0px;
     border-top: 10px solid black;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
-    &.active{
+
+    &.active {
         transform: rotate(-180deg);
     }
-}
-
-
-.menu__arrow{
-
 }
 
 body.mouse .menu__list>li:hover .sub-menu__list {
     display: block;
 }
 
-body.touch .sub-menu__list.open{
+body.touch .sub-menu__list.open {
     display: block;
 }
 
-body.touch .arrow{
+body.touch .arrow {
     display: block;
 }

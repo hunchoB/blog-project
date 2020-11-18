@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Меню</title>
+    <title>Настройка профиля</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -44,48 +44,66 @@
                 </div>
             </header>
 
-            <div class="login">
-                <div class="container_allpage">
-                    <div class="regform">
-                        <div id="subscribe" class="animate form">
-                            <form action="/$" autocomplete="on">
-                                <div class="regform__title title">Зарегистрироваться</div>
-                                <p>
-                                    <label for="usernamesignup" class="uname" data-icon="u">Ваш логин</label>
-                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text"
-                                        placeholder="username" />
-                                </p>
-                                <p>
-                                    <label for="emailsignup" class="youmail" data-icon="e">Ваш email</label>
-                                    <input id="emailsignup" name="emailsignup" required="required" type="text"
-                                        placeholder="user@mail.com" />
-                                </p>
-                                <p>
-                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Пароль</label>
-                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password"
-                                        placeholder="password" />
-                                </p>
-                                <p>
-                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Повторите
-                                        пароль</label>
-                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required"
-                                        type="password" placeholder="password" />
-                                </p>
-                                <p class="loginb">
-                                    <a href="index.html" id="mainLink"></a>
-                                    <input type="submit" id="submit" value="Зарегистрироваться" />
-                                </p>
-                                <p class="change_link">
-                                    Уже зарегистрированы ?
-                                    <a href="login.html" class="to_subscribe"> Войти </a>
-                                </p>
-                            </form>
+            <div class="container_allpage">
+                <div class="form">
+                    <form action="#" id="form" class="form__body">
+
+                        <h1 class="form__title title">Настроить профиль</h1>
+                        <div class="form__item">
+                            <label for="formName" class="form__label">Имя:</label>
+                            <input type="text" id="formName" name="name" class="form__input">
                         </div>
-                    </div>
+                        <div class="form__item">
+                            <label for="formOldPassword" class="form__label">Старый пароль*:</label>
+                            <input type="password" id="formOldPassword" name="oldpass" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <label for="formPassword" class="form__label">Новый пароль:</label>
+                            <input type="password" id="formPassword" name="pass" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <label for="formRepeatPassword" class="form__label">Введите новый пароль еще раз*:</label>
+                            <input type="password" id="formRepeatPassword" name="reppass" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <label for="formDescribe" class="form__label">Расскажите о себе:</label>
+                            <textarea name="describe" id="formDescribe" class="form__input"></textarea>
+                        </div>
+                        <!-- <div class="form__item">
+                            <div class="form__label">Возраст:</div>
+                            <select name="age" class="select">
+                                <option value="от 18 до 25" selected>Young</option>
+                                <option value="от 25 до 45" selected>Middle</option>
+                                <option value="от 18 до 25" selected>Old</option>
+                            </select>
+                        </div> -->
+
+                        <div class="form__item">
+                            <div class="form__label">Прикрепите фото:</div>
+                            <div class="file">
+                                <div class="file__item">
+                                    <input accept=".jpg, .png, .gif" type="file" id="formImage" name="image"
+                                        class="file__input">
+                                    <div class="file__button">Выбрать</div>
+                                </div>
+                                <div class="file__preview"></div>
+                            </div>
+                        </div>
+
+                        <div class="file__item">
+                            <div class="checkbox">
+                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input"
+                                    checked>
+                                <label for="formAgreement" class="checkbox__label"><span>Даю свое согласие на обработку
+                                        данных в соответствии с <a href="">Условиями</a></span></label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form__button">Внести изменения</button>
+
+                    </form>
                 </div>
             </div>
-
-
 
             <footer class="footer">
                 <div class="container">
