@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Настройка профиля</title>
+    <title>Создание нового поста</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -22,7 +22,7 @@
                             <nav class="menu">
                                 <a href="base.html" class="home">Главная</a>
                                 <a href="" class="about">Мои статьи</a>
-                                <a href="createpost.html" class="portfolio">Создать статью</a>
+                                <a href="" class="portfolio">Создать статью</a>
                                 <ul class="menu__list">
                                     <li>
                                         <a href="" class="menu__link">username</a>
@@ -48,25 +48,9 @@
                 <div class="form">
                     <form action="#" id="form" class="form__body">
 
-                        <h1 class="form__title title">Настроить профиль</h1>
-                        <div class="form__item">
-                            <label for="formName" class="form__label">Имя:</label>
-                            <input type="text" id="formName" name="name" class="form__input">
-                        </div>
+                        <h1 class="form__title title">Создать новый пост</h1>
                         
-                        <div class="form__item">
-                            <label for="formDescribe" class="form__label">Расскажите о себе:</label>
-                            <textarea name="describe" id="formDescribe" class="form__input"></textarea>
-                        </div>
-                        <!-- <div class="form__item">
-                            <div class="form__label">Возраст:</div>
-                            <select name="age" class="select">
-                                <option value="от 18 до 25" selected>Young</option>
-                                <option value="от 25 до 45" selected>Middle</option>
-                                <option value="от 18 до 25" selected>Old</option>
-                            </select>
-                        </div> -->
-
+                        
                         <div class="form__item">
                             <div class="form__label">Прикрепите фото:</div>
                             <div class="file">
@@ -75,32 +59,16 @@
                                         class="file__input">
                                     <div class="file__button">Выбрать</div>
                                 </div>
-                                <div id="formPreview" class="file__preview"></div>
+                                <div id="formPreview" class="file__preview postphoto"></div>
                             </div>
                         </div>
                         <div class="form__item">
-                            <label for="formOldPassword" class="form__label">Старый пароль*:</label>
-                            <input type="password" id="formOldPassword" name="oldpass" class="form__input _req">
+                            <label for="formDescribe" class="form__label">Напишите что-нибудь интересное, чтобы люди не только видели, но и знали, чем вы занимаетесь !):</label>
+                            <textarea name="describe" id="formDescribe" class="form__input"></textarea>
                         </div>
-                        <div class="form__item">
-                            <label for="formPassword" class="form__label">Новый пароль:</label>
-                            <input type="password" id="formPassword" name="pass" class="form__input _req">
-                        </div>
-                        <div class="form__item">
-                            <label for="formRepeatPassword" class="form__label">Введите новый пароль еще раз*:</label>
-                            <input type="password" id="formRepeatPassword" name="reppass" class="form__input _req">
-                        </div>
+                        
 
-                        <div class="file__item">
-                            <div class="checkbox">
-                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req"
-                                    checked>
-                                <label for="formAgreement" class="checkbox__label"><span>Даю свое согласие на обработку
-                                        данных в соответствии с <a href="">Условиями</a></span></label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="form__button">Внести изменения</button>
+                        <button type="submit" class="form__button">Опубликовать</button>
 
                     </form>
                 </div>

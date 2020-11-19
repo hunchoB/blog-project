@@ -309,6 +309,10 @@ textarea.form__input {
   padding: 10px 0px 0px 0px;
 }
 
+.postphoto {
+  max-width: 600px;
+}
+
 .file__preview img {
   max-width: 100%;
 }
