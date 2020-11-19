@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
                 formAddError(input);
                 error++;
-            } else {
+            } 
+            else {
                 if (input.value === '') {
                     formAddError(input);
                     error++;

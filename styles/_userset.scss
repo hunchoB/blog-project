@@ -65,7 +65,6 @@ textarea.form__input {
     padding: 20px;
 }
 
-.file {}
 
 .file__item {
     position: relative;
@@ -178,4 +177,9 @@ textarea.form__input {
 
 .form__input._error {
     box-shadow: 0 0 15px red;
+}
+
+.change__link{
+    margin: 20px auto 0 auto;
+    text-align: center;
 }

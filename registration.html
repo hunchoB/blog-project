@@ -34,41 +34,38 @@
 
             <div class="login">
                 <div class="container_allpage">
-                    <div class="regform">
-                        <div id="subscribe" class="animate form">
-                            <form action="/$"  autocomplete="on">
-                                <div class="regform__title title">Зарегистрироваться</div>
-                                <p>
-                                    <label for="usernamesignup" class="uname" data-icon="u">Ваш логин</label>
-                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text"
-                                        placeholder="username" />
-                                </p>
-                                <p>
-                                    <label for="emailsignup" class="youmail" data-icon="e">Ваш email</label>
-                                    <input id="emailsignup" name="emailsignup" required="required" type="text"
-                                        placeholder="user@mail.com" />
-                                </p>
-                                <p>
-                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Пароль</label>
-                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password"
-                                        placeholder="password" />
-                                </p>
-                                <p>
-                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Повторите
-                                        пароль</label>
-                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required"
-                                        type="password" placeholder="password" />
-                                </p>
-                                <p class="loginb">
-                                    <a href="index.html" id="mainLink"></a>
-                                    <input type="submit" id="submit" value="Зарегистрироваться" />
-                                </p>
-                                <p class="change_link">
-                                    Уже зарегистрированы ?
-                                    <a href="login.html" class="to_subscribe"> Войти </a>
-                                </p>
-                            </form>
-                        </div>
+                    <div class="form">
+
+                        <form action="#" id="form" class="form__body">
+                            <h1 class="form__title title">Зарегистрироваться</h1>
+                            <div class="form__item">
+                                <label for="usernamesignup" class="form__label" data-icon="u">Ваш логин</label>
+                                <input id="usernamesignup" class="form__input" name="usernamesignup" required="required" type="text"
+                                    placeholder="username" />
+                            </div>
+                            <div class="form__item">
+                                <label for="emailsignup" class="form__label" data-icon="e">Ваш email</label>
+                                <input id="emailsignup"  class="form__input" name="emailsignup" required="required" type="text"
+                                    placeholder="user@mail.com" />
+                            </div>
+                            <div class="form__item">
+                                <label for="passwordsignup" class="form__label" data-icon="p">Пароль</label>
+                                <input id="passwordsignup" class="form__input" name="passwordsignup" required="required" type="password"
+                                    placeholder="password" />
+                            </div>
+                            <div class="form__item">
+                                <label for="passwordsignup_confirm" class="form__label" data-icon="p">Повторите
+                                    пароль</label>
+                                <input id="passwordsignup_confirm" class="form__input" name="passwordsignup_confirm" required="required"
+                                    type="password" placeholder="password" />
+                            </div>
+                            <button type="submit" class="form__button"  ><a href="index.html" id="mainLink"></a> Зарегистрироваться</button>
+                            <div class="change__link">
+                                Уже зарегистрированы ?
+                                <a href="login.html" class="to_subscribe"> Войти </a>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </div>

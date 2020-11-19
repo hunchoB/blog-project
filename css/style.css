@@ -405,6 +405,11 @@ textarea.form__input {
           box-shadow: 0 0 15px red;
 }
 
+.change__link {
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+
 body {
   font-family: 'Playfair Display', serif;
 }
