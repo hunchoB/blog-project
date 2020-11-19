@@ -30,36 +30,48 @@ document.addEventListener('DOMContentLoaded', function () {
             // form.classList.remove('_sending'); //Когда форма отправится то раскомментировать
         } else {
             alert('Заполните обязательные поля!!');
-            
-            
+
+
             // form.classList.remove('_sending'); //Когда форма отправится то раскомментировать
         }
+
     }
 
     function formValidate(form) {
         let error = 0;
-        let formReq = document.querySelectorAll('._req');
 
-        for (let i = 0; i < formReq.length; i++) {
-            const input = formReq[i];
-            formRemoveError(input);
+        let oldPassword = document.getElementById("formOldPassword");
+        let password = document.getElementById("formPassword");
+        let repeatPassword = document.getElementById("formRepeatPassword");
 
-            if (input.classList.contains('_email')) {
-                if (emailTest(input)) {
+        if (oldPassword.value != '' || password.value != '' || repeatPassword.value != '') {
+
+            oldPassword.classList.add("_req");
+            password.classList.add("_req");
+            repeatPassword.classList.add("_req");
+
+            let formReq = document.querySelectorAll('._req');
+
+            for (let i = 0; i < formReq.length; i++) {
+                const input = formReq[i];
+                formRemoveError(input);
+
+                if (input.classList.contains('_email')) {
+                    if (emailTest(input)) {
+                        formAddError(input);
+                        error++;
+                    }
+                } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
                     formAddError(input);
                     error++;
+                } else {
+                    if (input.value === '') {
+                        formAddError(input);
+                        error++;
+                    }
                 }
-            } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
-                formAddError(input);
-                error++;
-            } 
-            else {
-                if (input.value === '') {
-                    formAddError(input);
-                    error++;
-                }
+
             }
-
         }
         return error;
     }
